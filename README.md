@@ -38,7 +38,7 @@ commands:
     job_exc       Get job exceptions
     job_res       Get job result
     job_chk       Get job checkpoints
-    info
+    info          Get cluster info
     job           Get job info
 
 ```
@@ -58,7 +58,7 @@ Job started with jobid=cd3d996432f6acd21248e10b566ff9bf
 ```
  
 - as an **interactive** client (execute without parameters):
-> python flink.py
+> flink.py
 ```commandline
 Connecting to url: http://a.b.c.d:xxxx
 > help
@@ -115,7 +115,7 @@ cd3d996432f6acd21248e10b566ff9bf RUNNING      my_job_2
 - optionally change the following as well:
   - DEFAULT_LOG_LEVEL = logging.INFO  # set to logging.DEBUG for debugging (e.g. see REST req/resp)
   - DEFAULT_SAVEPOINTS_DIR = "/opt/flink/state/savepoints"  # Flink cluster path!
-- make it executable (chmod a+x flink.py) and optionally modify the _shebang_ #!/usr/bin/python at the beginning of the script to point at your python interpreter,
+- make it executable (chmod a+x flink.py) and optionally modify the _shebang_ (#!/usr/bin/python) at the beginning of the script to point at your python interpreter,
 - add the dir containing flink.py to $PATH
 - execute: flink.py
 
